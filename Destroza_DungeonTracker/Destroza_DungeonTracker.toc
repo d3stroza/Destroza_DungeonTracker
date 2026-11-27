@@ -1,0 +1,15 @@
+## Interface: 16001, 11509, 38002, 50504, 120007, 120105
+## Title: Destroza Dungeon Tracker
+## Notes: Shows how many RestedXP guide steps are left until your next dungeons and loads the RestedXP dungeon quest guides
+## Notes-deDE: Zeigt, wie viele RestedXP-Schritte es noch bis zu den nächsten Dungeons sind, und lädt die RestedXP-Dungeon-Quest-Guides
+## Author: Gerrit
+## Version: 3.2.0
+## Dependencies: RXPGuides
+## SavedVariables: DestrozaDungeonTrackerDB
+## SavedVariablesPerCharacter: DestrozaDungeonTrackerCharDB
+## IconTexture: Interface\Icons\INV_Misc_Key_03
+
+Compat.lua
+Locales.lua
+DestrozaProfiles.lua
+Destroza_DungeonTracker.lua
