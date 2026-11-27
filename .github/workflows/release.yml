@@ -1,0 +1,25 @@
+# Pushing a tag like v1.2.3 builds the addon ZIP and publishes a GitHub release
+# (WowUp installs and updates from these releases).
+name: Release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ZIP
+        run: |
+          NAME="${GITHUB_REPOSITORY#*/}"
+          VERSION="${GITHUB_REF_NAME#v}"
+          zip -r "${NAME}-${VERSION}.zip" Destroza_*/ -x "*.bak"
+          echo "ZIP=${NAME}-${VERSION}.zip" >> "$GITHUB_ENV"
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP }}
+          name: ${{ github.event.repository.name }} ${{ github.ref_name }}
+          generate_release_notes: true
