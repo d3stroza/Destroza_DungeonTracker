@@ -1,17 +1,17 @@
 # Destroza Dungeon Tracker
 
-Zeigt, wie viele RestedXP-Guide-Schritte noch bis zu deinen nächsten Dungeons fehlen, und lädt die RestedXP-Dungeon-Quest-Guides.
+Shows how many RestedXP guide steps are left until your next dungeons and loads the RestedXP dungeon quest guides.
 
-**Benötigt:** RXPGuides (RestedXP).
+**Requires:** RXPGuides (RestedXP).
 
 ## Installation
 
-**Mit WowUp (empfohlen, Updates kommen automatisch):**
-1. In WowUp **Get Addons** öffnen und oben **Install from URL** wählen.
-2. `https://github.com/d3stroza/Destroza_DungeonTracker` eintragen und installieren.
-3. Neue Versionen zeigt WowUp dann wie jedes andere Addon zum Updaten an.
+**With WowUp (recommended, updates arrive automatically):**
+1. In WowUp, open **Get Addons** and choose **Install from URL** at the top.
+2. Enter `https://github.com/d3stroza/Destroza_DungeonTracker` and install.
+3. WowUp then shows new versions for updating like any other addon.
 
-**Von Hand:** Unter **Releases** (rechts auf dieser Seite) die neueste ZIP laden und den Inhalt nach `World of Warcraft/_forever_/Interface/AddOns/` entpacken.
+**Manually:** Download the latest ZIP under **Releases** (on the right side of this page) and extract its contents to `World of Warcraft/_forever_/Interface/AddOns/`.
 
-## Patchnotes
-Alle Änderungen stehen in [CHANGELOG.md](CHANGELOG.md) und bei jedem Release.
+## Patch notes
+All changes are listed in [CHANGELOG.md](CHANGELOG.md) and with every release.
