@@ -26,6 +26,11 @@ jobs:
       - name: Build ZIP
         if: steps.v.outputs.exists == '0'
         run: zip -r "${{ steps.v.outputs.name }}-${{ steps.v.outputs.version }}.zip" Destroza_*/ -x "*.bak"
+      - name: Patch notes from CHANGELOG.md
+        if: steps.v.outputs.exists == '0'
+        run: |
+          awk -v v="## v${{ steps.v.outputs.version }}" '$0==v{on=1;next} /^## /{on=0} on' CHANGELOG.md > notes.md || true
+          [ -s notes.md ] || echo "Siehe CHANGELOG.md" > notes.md
       - name: Publish release
         if: steps.v.outputs.exists == '0'
         uses: softprops/action-gh-release@v2
@@ -34,4 +39,4 @@ jobs:
           target_commitish: ${{ github.sha }}
           name: ${{ steps.v.outputs.name }} ${{ steps.v.outputs.version }}
           files: ${{ steps.v.outputs.name }}-${{ steps.v.outputs.version }}.zip
-          generate_release_notes: true
+          body_path: notes.md

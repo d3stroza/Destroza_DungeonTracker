@@ -12,3 +12,6 @@ Zeigt, wie viele RestedXP-Guide-Schritte noch bis zu deinen nächsten Dungeons f
 3. Neue Versionen zeigt WowUp dann wie jedes andere Addon zum Updaten an.
 
 **Von Hand:** Unter **Releases** (rechts auf dieser Seite) die neueste ZIP laden und den Inhalt nach `World of Warcraft/_forever_/Interface/AddOns/` entpacken.
+
+## Patchnotes
+Alle Änderungen stehen in [CHANGELOG.md](CHANGELOG.md) und bei jedem Release.
